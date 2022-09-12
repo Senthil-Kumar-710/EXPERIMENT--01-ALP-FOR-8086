@@ -1,7 +1,9 @@
 # EXPERIMENT--01-ALP-FOR-8086
-Name :
-Roll no 
-Date of experiment :
+Name : Senthil Kumar S
+
+Roll No: 212221230091
+
+Date of experiment : 12.09.2022
 
 
 
@@ -9,7 +11,7 @@ Date of experiment :
 
 ## Aim: To Write and execute ALP on fundamental arithmetic and logical operations
 ## Components required: 8086  emulator 
-## Theory 
+## Theory : 
 Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as EMU8086, is an emulator of the program 8086 microprocessor. It is developed with a built-in 8086 assembler. This application is able to run programs on both PC desktops and laptops. This tool is primarily designed to copy or emulate hardware. These include the memory of a program, CPU, RAM, input and output devices, and even the display screen. There are instructions to follow when using this emulator. It can be executed into one of the two ways: backward or forward. There are also examples of assembly source code included. With this, it allows the programming of assembly language, reverse engineering, hardware architecture, and creating miniature operating system (OS). The user interface of 8086 Microprocessor Emulator is simple and easy to manage. There are five major buttons with icons and titles included. These are “Load”, “Reload”, “Step Back”, “Single Step”, and “Run”. Above those buttons is the menu that includes “File”, “View”, “Virtual Devices”, “Virtual Drive”, and “Help”. Below the buttons is a series of choices that are usually in numbers and codes. At the leftmost part is an area called “Registers” with an indication of either “H” or “L”. The other side is divided into two, which enables users to manually reset, debug, flag, etc. What is 8086 emulator emu8086 is an emulator of Intel 8086 (AMD compatible) microprocessor with integrated 8086 assembler and tutorials for beginners. Emulator runs programs like the real microprocessor in step-by-step mode. it shows registers, memory, stack, variables and flags.
 
 
@@ -77,25 +79,81 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 
 ## Programs for arithmetic  operations
 
-## Addition  of 8 bit ALP 
-
-
+## Addition of 8 bit ALP : 
+```
+org 100h  
+MOV SI,1200h;
+MOV CL,00h;
+MOV AL,08H;
+MOV BL,09H;
+ADD AL,BL;
+JNC L1;
+INC CL;
+L1:MOV [SI],AL;
+MOV [SI+2],CL;
+HLT;
+```
 
 ## Output  
- 
-## Subtraction   of 8 bit numbers  ALP 
- 
-## Output  
-## Multiplication alp 
+![1](https://user-images.githubusercontent.com/93860256/189707252-d5c26e80-072f-4c5d-8a9a-c86201d3d15f.PNG)
+
+
+## Subtraction of 8 bit numbers ALP : 
+ ```
+org 100h
+MOV SI,1200h;
+MOV CL,00h;
+MOV AL,08H;
+MOV BL,07H;
+SUB AL,BL;
+JNC L1;
+NEG AL;
+INC CL;
+L1:MOV [SI],AL;
+MOV [SI+1],CL;
+HLT;
+```
+
+## Output 
+![2](https://user-images.githubusercontent.com/93860256/189707340-acfc7f24-c1e0-4649-a510-0201ff583a63.PNG)
+
+
+## Multiplication of 8 bit numbers ALP :
+```
+org 100h  
+MOV SI,1200h;
+MOV CL,00h;
+MOV AL,10H;
+MOV BL,03H;
+MUL BL;
+MOV [SI],AL;
+MOV [SI+1],AH;
+HLT;
+```
+
  ## Output  
+![3](https://user-images.githubusercontent.com/93860256/189707410-acae0e42-b9dc-42df-b94f-66c2bbc9ab7e.PNG)
 
 
-## Division alp 
+## Division of 8 bit numbers ALP :
+```
+org 100h  
+MOV SI,1200h;
+MOV CL,00h;
+MOV AL,15H;
+MOV BL,04H;
+DIV BL;
+MOV [SI],AL;
+MOV [SI+1],AH;
+HLT;
+```
 
 ## Output  
+![4](https://user-images.githubusercontent.com/93860256/189707448-fc45ccfa-4d1b-4138-b9fc-acb15ada5442.PNG)
 
 
 ## Result :
+Thus, a program is executed on ALP for the fundamental arithmetic and logical operations.
  
 
 
